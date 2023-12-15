@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:memory_game/constrants.dart';
+import 'package:memory_game/pages/game_page.dart';
 import 'package:memory_game/theme.dart';
 
 class CardNivel extends StatelessWidget {
@@ -15,7 +16,15 @@ class CardNivel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => {},
+      onTap: () => {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) =>
+                GamePage(modo: modo, nivel: nivel),
+          ),
+        ),
+      },
       borderRadius: const BorderRadius.all(Radius.circular(10)),
       child: Container(
         width: 90,
