@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:memory_game/constrants.dart';
+import 'package:memory_game/pages/nivel_page.dart';
 import 'package:memory_game/theme.dart';
 import 'package:memory_game/widgets/logo.dart';
 import 'package:memory_game/widgets/recordes.dart';
@@ -20,12 +22,28 @@ class HomePage extends StatelessWidget {
             StartButton(
               title: 'Modo Normal',
               color: Colors.white,
-              action: () {},
+              action: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const NivelPage(modo: Modo.normal),
+                  ),
+                );
+              },
             ),
             StartButton(
               title: 'Modo Round 6',
               color: Round6Theme.color,
-              action: () {},
+              action: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const NivelPage(modo: Modo.round6),
+                  ),
+                );
+              },
             ),
             const SizedBox(height: 60),
             const Recordes(),

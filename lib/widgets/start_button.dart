@@ -19,7 +19,7 @@ class StartButton extends StatelessWidget {
       padding: const EdgeInsets.only(top: 24),
       child: OutlinedButton(
         style: Round6Theme.outlineButtonStyle(color: color),
-        onPressed: () => action,
+        onPressed: () => action(),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
