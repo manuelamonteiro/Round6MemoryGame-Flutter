@@ -1,8 +1,8 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:memory_game/constrants.dart';
 import 'package:memory_game/widgets/card_game.dart';
+import 'package:memory_game/widgets/feedback_game.dart';
 
 class GamePage extends StatelessWidget {
   final Modo modo;
@@ -54,6 +54,9 @@ class GamePage extends StatelessWidget {
           ],
         ),
       ),
+
+      // body: const FeedbackGame(resultado: Resultado.eliminado),
+
       body: Center(
         child: GridView.count(
           shrinkWrap: true,
