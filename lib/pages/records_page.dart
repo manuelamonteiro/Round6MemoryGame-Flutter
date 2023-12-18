@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:memory_game/constrants.dart';
 import 'package:memory_game/theme.dart';
 
-class RecordesPage extends StatelessWidget {
-  final Modo modo;
+class RecordsPage extends StatelessWidget {
+  final Mode mode;
   final List<String> recs = ['Modo', 'Nível 8', 'Nível 10', 'Nível 12'];
 
-  RecordesPage({
+  RecordsPage({
     Key? key,
-    required this.modo,
+    required this.mode,
   }) : super(key: key);
 
-  getModo() {
-    return modo == Modo.normal ? 'Normal' : 'Round 6';
+  getMode() {
+    return mode == Mode.normal ? 'Normal' : 'Round 6';
   }
 
   @override
@@ -30,7 +30,7 @@ class RecordesPage extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 36, bottom: 24),
                       child: Center(
                         child: Text(
-                          'Modo ${getModo()}',
+                          'Modo ${getMode()}',
                           style: const TextStyle(
                               fontSize: 28, color: Round6Theme.color),
                         ),

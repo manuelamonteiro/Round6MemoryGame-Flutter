@@ -5,19 +5,19 @@ import 'package:memory_game/widgets/card_game.dart';
 import 'package:memory_game/widgets/feedback_game.dart';
 
 class GamePage extends StatelessWidget {
-  final Modo modo;
-  final int nivel;
+  final Mode mode;
+  final int level;
 
   const GamePage({
     Key? key,
-    required this.modo,
-    required this.nivel,
+    required this.mode,
+    required this.level,
   }) : super(key: key);
 
   getAxisCount() {
-    if (nivel < 10) {
+    if (level < 10) {
       return 2;
-    } else if (nivel == 10 || nivel == 12 || nivel == 18) {
+    } else if (level == 10 || level == 12 || level == 18) {
       return 3;
     } else {
       return 4;
@@ -36,7 +36,7 @@ class GamePage extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(modo == Modo.round6
+                Icon(mode == Mode.round6
                     ? Icons.my_location
                     : Icons.touch_app_rounded),
                 const SizedBox(width: 10),
@@ -66,9 +66,9 @@ class GamePage extends StatelessWidget {
           padding: const EdgeInsets.all(24),
           children: [
             ...List.generate(
-              nivel,
+              level,
               (index) => CardGame(
-                modo: modo,
+                mode: mode,
                 option: Random().nextInt(14),
               ),
             ),

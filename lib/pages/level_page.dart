@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:memory_game/constrants.dart';
-import 'package:memory_game/widgets/card_nivel.dart';
+import 'package:memory_game/widgets/level_card.dart';
 
-class NivelPage extends StatelessWidget {
-  final Modo modo;
-  const NivelPage({
+class LevelPage extends StatelessWidget {
+  final Mode mode;
+  const LevelPage({
     Key? key,
-    required this.modo,
+    required this.mode,
   }) : super(key: key);
 
   @override
@@ -23,9 +23,9 @@ class NivelPage extends StatelessWidget {
           crossAxisSpacing: 20,
           padding: const EdgeInsets.all(24),
           children: [
-            CardNivel(modo: modo, nivel: 6),
-            CardNivel(modo: modo, nivel: 8),
-            CardNivel(modo: modo, nivel: 12),
+            LevelCard(mode: mode, level: 6),
+            LevelCard(mode: mode, level: 8),
+            LevelCard(mode: mode, level: 12),
           ],
         ),
       ),

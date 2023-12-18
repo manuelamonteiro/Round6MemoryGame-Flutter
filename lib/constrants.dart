@@ -1,9 +1,9 @@
-enum Modo {
+enum Mode {
   normal,
   round6,
 }
 
-enum Resultado {
-  aprovado,
-  eliminado,
+enum Result {
+  approved,
+  eliminated,
 }

@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:memory_game/constrants.dart';
-import 'package:memory_game/pages/recordes_page.dart';
+import 'package:memory_game/pages/records_page.dart';
 import 'package:memory_game/theme.dart';
 
-class Recordes extends StatefulWidget {
-  const Recordes({Key? key}) : super(key: key);
+class Records extends StatefulWidget {
+  const Records({Key? key}) : super(key: key);
 
   @override
-  State<Recordes> createState() => _RecordesState();
+  State<Records> createState() => _RecordsState();
 }
 
-class _RecordesState extends State<Recordes> {
-  showRecordes(Modo modo) async {
+class _RecordsState extends State<Records> {
+  showRecords(Mode mode) async {
     await Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (BuildContext context) => RecordesPage(modo: modo),
+          builder: (BuildContext context) => RecordsPage(mode: mode),
         ));
   }
 
@@ -41,12 +41,12 @@ class _RecordesState extends State<Recordes> {
             ListTile(
               title: const Text('Modo Normal'),
               trailing: const Icon(Icons.chevron_right),
-              onTap: () => showRecordes(Modo.normal),
+              onTap: () => showRecords(Mode.normal),
             ),
             ListTile(
               title: const Text('Modo Round 6'),
               trailing: const Icon(Icons.chevron_right),
-              onTap: () => showRecordes(Modo.round6),
+              onTap: () => showRecords(Mode.round6),
             ),
           ],
         ),

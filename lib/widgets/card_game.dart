@@ -1,17 +1,16 @@
 import 'dart:async';
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:memory_game/constrants.dart';
 import 'package:memory_game/theme.dart';
 
 class CardGame extends StatefulWidget {
-  final Modo modo;
+  final Mode mode;
   final int option;
 
   const CardGame({
     Key? key,
-    required this.modo,
+    required this.mode,
     required this.option,
   }) : super(key: key);
 
@@ -47,11 +46,11 @@ class _CardGameState extends State<CardGame>
     }
   }
 
-  AssetImage getImage(double angulo) {
-    if (angulo > 0.5 * pi) {
+  AssetImage getImage(double angle) {
+    if (angle > 0.5 * pi) {
       return AssetImage('images/${widget.option.toString()}.png');
     } else {
-      return widget.modo == Modo.normal
+      return widget.mode == Mode.normal
           ? const AssetImage('images/card_normal.png')
           : const AssetImage('images/card_round.png');
     }
@@ -62,10 +61,10 @@ class _CardGameState extends State<CardGame>
     return AnimatedBuilder(
         animation: animation,
         builder: (BuildContext context, _) {
-          final angulo = animation.value * pi;
+          final angle = animation.value * pi;
           final transform = Matrix4.identity()
             ..setEntry(3, 2, 0.002)
-            ..rotateY(angulo);
+            ..rotateY(angle);
 
           return GestureDetector(
             onTap: () => flipCard(),
@@ -75,7 +74,7 @@ class _CardGameState extends State<CardGame>
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: widget.modo == Modo.normal
+                    color: widget.mode == Mode.normal
                         ? Colors.white
                         : Round6Theme.color,
                     width: 2,
@@ -83,7 +82,7 @@ class _CardGameState extends State<CardGame>
                   borderRadius: const BorderRadius.all(Radius.circular(5)),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: getImage(angulo),
+                    image: getImage(angle),
                   ),
                 ),
               ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:memory_game/constrants.dart';
-import 'package:memory_game/pages/nivel_page.dart';
+import 'package:memory_game/pages/level_page.dart';
 import 'package:memory_game/theme.dart';
 import 'package:memory_game/widgets/logo.dart';
-import 'package:memory_game/widgets/recordes.dart';
+import 'package:memory_game/widgets/records.dart';
 import 'package:memory_game/widgets/start_button.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (BuildContext context) =>
-                        const NivelPage(modo: Modo.normal),
+                        const LevelPage(mode: Mode.normal),
                   ),
                 );
               },
@@ -40,13 +40,13 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (BuildContext context) =>
-                        const NivelPage(modo: Modo.round6),
+                        const LevelPage(mode: Mode.round6),
                   ),
                 );
               },
             ),
             const SizedBox(height: 60),
-            const Recordes(),
+            const Records(),
           ],
         ),
       ),

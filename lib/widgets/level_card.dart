@@ -3,14 +3,14 @@ import 'package:memory_game/constrants.dart';
 import 'package:memory_game/pages/game_page.dart';
 import 'package:memory_game/theme.dart';
 
-class CardNivel extends StatelessWidget {
-  final Modo modo;
-  final int nivel;
+class LevelCard extends StatelessWidget {
+  final Mode mode;
+  final int level;
 
-  const CardNivel({
+  const LevelCard({
     Key? key,
-    required this.modo,
-    required this.nivel,
+    required this.mode,
+    required this.level,
   }) : super(key: key);
 
   @override
@@ -21,7 +21,7 @@ class CardNivel extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (BuildContext context) =>
-                GamePage(modo: modo, nivel: nivel),
+                GamePage(mode: mode, level: level),
           ),
         ),
       },
@@ -32,15 +32,15 @@ class CardNivel extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           border: Border.all(
-            color: modo == Modo.normal ? Colors.white : Round6Theme.color,
+            color: mode == Mode.normal ? Colors.white : Round6Theme.color,
           ),
           borderRadius: const BorderRadius.all(Radius.circular(10)),
-          color: modo == Modo.normal
+          color: mode == Mode.normal
               ? Colors.transparent
               : Round6Theme.color.withOpacity(.6),
         ),
         child: Center(
-          child: Text(nivel.toString(), style: const TextStyle(fontSize: 30)),
+          child: Text(level.toString(), style: const TextStyle(fontSize: 30)),
         ),
       ),
     );

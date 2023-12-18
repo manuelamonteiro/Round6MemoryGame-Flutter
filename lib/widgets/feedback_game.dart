@@ -3,15 +3,15 @@ import 'package:memory_game/constrants.dart';
 import 'package:memory_game/widgets/start_button.dart';
 
 class FeedbackGame extends StatelessWidget {
-  final Resultado resultado;
+  final Result result;
 
   const FeedbackGame({
     Key? key,
-    required this.resultado,
+    required this.result,
   }) : super(key: key);
 
-  String getResultado() {
-    return resultado == Resultado.aprovado ? 'aprovado' : 'eliminado';
+  String getResult() {
+    return result == Result.approved ? 'aprovado' : 'eliminado';
   }
 
   @override
@@ -22,14 +22,14 @@ class FeedbackGame extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Text(
-            '${getResultado().toUpperCase()}!',
+            '${getResult().toUpperCase()}!',
             style: const TextStyle(fontSize: 30),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 30),
-            child: Image.asset('images/${getResultado()}.png'),
+            child: Image.asset('images/${getResult()}.png'),
           ),
-          resultado == Resultado.eliminado
+          result == Result.eliminated
               ? StartButton(
                   title: 'Tentar novamente',
                   color: Colors.white,
