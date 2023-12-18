@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:memory_game/pages/home_page.dart';
-import 'package:memory_game/theme.dart';
+import 'package:memory_game/utils/theme.dart';
 
 void main() {
   runApp(const MyApp());

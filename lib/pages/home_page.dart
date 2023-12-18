@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:memory_game/constrants.dart';
+import 'package:memory_game/utils/constrants.dart';
 import 'package:memory_game/pages/level_page.dart';
-import 'package:memory_game/theme.dart';
+import 'package:memory_game/utils/theme.dart';
 import 'package:memory_game/widgets/logo.dart';
 import 'package:memory_game/widgets/records.dart';
 import 'package:memory_game/widgets/start_button.dart';

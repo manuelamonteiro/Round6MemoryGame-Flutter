@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:memory_game/constrants.dart';
+import 'package:memory_game/utils/constrants.dart';
 import 'package:memory_game/pages/game_page.dart';
-import 'package:memory_game/theme.dart';
+import 'package:memory_game/utils/theme.dart';
 
 class LevelCard extends StatelessWidget {
   final Mode mode;

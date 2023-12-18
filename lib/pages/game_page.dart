@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:memory_game/constrants.dart';
+import 'package:memory_game/utils/constrants.dart';
 import 'package:memory_game/widgets/card_game.dart';
 import 'package:memory_game/widgets/feedback_game.dart';
 

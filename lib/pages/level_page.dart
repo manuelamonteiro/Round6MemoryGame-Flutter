@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:memory_game/constrants.dart';
+import 'package:memory_game/utils/constrants.dart';
 import 'package:memory_game/widgets/level_card.dart';
 
 class LevelPage extends StatelessWidget {

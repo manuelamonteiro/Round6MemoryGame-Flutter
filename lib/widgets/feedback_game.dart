@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:memory_game/constrants.dart';
+import 'package:memory_game/utils/constrants.dart';
 import 'package:memory_game/widgets/start_button.dart';
 
 class FeedbackGame extends StatelessWidget {

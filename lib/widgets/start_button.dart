@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:memory_game/theme.dart';
+import 'package:memory_game/utils/theme.dart';
 
 class StartButton extends StatelessWidget {
   final String title;

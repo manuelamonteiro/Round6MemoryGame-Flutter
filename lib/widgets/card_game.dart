@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:memory_game/constrants.dart';
-import 'package:memory_game/theme.dart';
+import 'package:memory_game/utils/constrants.dart';
+import 'package:memory_game/utils/theme.dart';
 
 class CardGame extends StatefulWidget {
   final Mode mode;
